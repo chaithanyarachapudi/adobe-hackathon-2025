@@ -1,1 +1,7 @@
 PyMuPDF==1.22.3
+pytesseract
+Pillow
+torch
+transformers
+sentence-transformers
+langdetect

@@ -1,0 +1,7 @@
+from sentence_transformers import SentenceTransformer, util
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# After extracting headings:
+embeddings = model.encode([h['text'] for h in all_headings], convert_to_tensor=True)
+similarities = util.cos_sim(embeddings, embeddings)
